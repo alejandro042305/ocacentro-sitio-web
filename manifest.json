@@ -1,0 +1,27 @@
+{
+  "name": "OCACENTRO — Compañía de Servicio Técnico",
+  "short_name": "OCACENTRO",
+  "description": "Compañía de servicio técnico en Bogotá. Reparación de refrigeración (nevecones, neveras, congeladores), lavadoras, secadoras y aire acondicionado a domicilio.",
+  "lang": "es-CO",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0E1726",
+  "theme_color": "#0E1726",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "utilities"]
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0E1726" />
+  <!-- Esta página puede servirse para cualquier URL rota, sin importar su profundidad.
+       <base> asegura que los recursos relativos siempre resuelvan contra la raíz del sitio. -->
+  <base href="/" />
+
+  <title>Página no encontrada (404) | OCACENTRO</title>
+  <meta name="description" content="La página que buscas no existe o fue movida. Vuelve al inicio de OCACENTRO, servicio técnico a domicilio en Bogotá." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" /></noscript>
+
+  <style>
+    :root{--c-navy:#0E1726;--c-blue:#2D6BFF;--c-blue-600:#1B54E8;--c-green:#22C15E;--c-white:#fff;--c-mist:#F5F8FC;--c-line:#E5EAF1;--c-muted:#5A6A80;--c-text:#0E1726;
+      --font-head:'Space Grotesk',system-ui,sans-serif;--font-body:'Inter',system-ui,sans-serif;--nav-h:74px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+    body{font-family:var(--font-body);color:var(--c-text);background:var(--c-white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img,svg{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+    .container{width:100%;max-width:1240px;margin-inline:auto;padding-inline:clamp(1.1rem,4vw,2.25rem)}
+    .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:1000;display:flex;align-items:center;transition:background .35s ease,box-shadow .35s ease}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1240px;margin-inline:auto;padding-inline:clamp(1.1rem,4vw,2.25rem)}
+    .nav.is-scrolled{background:rgba(255,255,255,.78);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);box-shadow:0 1px 0 var(--c-line)}
+  </style>
+  <link rel="preload" as="style" href="css/styles.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" as="style" href="css/animations.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" as="style" href="css/responsive.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </noscript>
+</head>
+
+<body data-page="404">
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header>
+    <nav class="nav" id="navbar" aria-label="Navegación principal">
+      <div class="nav__inner">
+        <a class="brand" href="./" aria-label="OCACENTRO — inicio">
+          <span class="brand__mark" aria-hidden="true"><img src="assets/images/logo-icon.png" alt="" width="24" height="24" /></span>
+          <span class="brand__text"><strong>OCACENTRO</strong>Compañía de Servicio Técnico</span>
+        </a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="./">Inicio</a></li>
+          <li><a href="refrigeracion/">Refrigeración</a></li>
+          <li><a href="lavadoras/">Lavadoras</a></li>
+          <li><a href="aires-acondicionados/">Aires</a></li>
+          <li><a href="empresa/">Empresa</a></li>
+          <li><a href="contacto/">Contacto</a></li>
+        </ul>
+        <div class="nav__cta">
+          <a class="btn btn--ghost" href="tel:+573133207064"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Llamar</a>
+          <a class="btn btn--primary" href="https://wa.me/573133207064?text=Hola,%20necesito%20servicio%20t%C3%A9cnico%20a%20domicilio" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="section error-404">
+      <div class="container">
+        <p class="error-404__code reveal" data-reveal>404</p>
+        <h1 class="reveal" data-reveal data-reveal-delay="80">Esta página no existe</h1>
+        <p class="section__lead reveal" data-reveal data-reveal-delay="140" style="max-width:520px;margin-inline:auto">Puede que el enlace esté mal escrito o que la página se haya movido. Vuelve al inicio o escríbenos si necesitas ayuda.</p>
+        <div class="error-404__actions reveal" data-reveal data-reveal-delay="200">
+          <a class="btn btn--primary btn--lg ripple" href="./">Volver al inicio</a>
+          <a class="btn btn--light btn--lg ripple" href="https://wa.me/573133207064?text=Hola,%20necesito%20servicio%20t%C3%A9cnico%20a%20domicilio" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="./"><span class="brand__mark" aria-hidden="true"><img src="assets/images/logo-icon.png" alt="" width="22" height="22" /></span><span class="brand__text"><strong>OCACENTRO</strong>Compañía de Servicio Técnico</span></a>
+        <p class="footer__desc">Compañía de servicio técnico con más de 25 años de experiencia. Reparación a domicilio de refrigeración, lavadoras, secadoras y aire acondicionado en Bogotá y la sabana.</p>
+      </div>
+      <nav class="footer__col" aria-label="Servicios">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="refrigeracion/">Refrigeración</a></li>
+          <li><a href="lavadoras/">Lavadoras y secadoras</a></li>
+          <li><a href="aires-acondicionados/">Aire acondicionado</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="Empresa">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="empresa/">Sobre nosotros</a></li>
+          <li><a href="empresa/#cobertura">Cobertura</a></li>
+          <li><a href="empresa/#faq">Preguntas frecuentes</a></li>
+          <li><a href="contacto/">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+573133207064">313 320 7064</a></li>
+          <li><a href="https://wa.me/573133207064" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:ocatecsas@gmail.com">ocatecsas@gmail.com</a></li>
+          <li>Carrera 106 #71A-83, Bogotá</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© <span id="year">2025</span> OCACENTRO · Compañía de Servicio Técnico. Todos los derechos reservados.</p>
+        <p>Bogotá · Soacha · Mosquera · Chía · Zipaquirá · Cota · Funza y más</p>
+        <nav class="footer__legal" aria-label="Legal">
+          <a href="politica-de-privacidad/">Política de privacidad</a>
+          <a href="politica-de-garantia/">Política de garantía</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>

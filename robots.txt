@@ -1,0 +1,8 @@
+# robots.txt — Servicio Técnico de Nevecones
+# Permite el rastreo completo del sitio a todos los motores de búsqueda.
+
+User-agent: *
+Allow: /
+
+# Ubicación del sitemap
+Sitemap: https://serviciotecnicodenevecones.com/sitemap.xml

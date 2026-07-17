@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0E1726" />
+
+  <!-- ============================ SEO PRINCIPAL ============================ -->
+  <title>OCACENTRO | Servicio Técnico en Bogotá — Refrigeración, Lavadoras y Aire Acondicionado</title>
+  <meta name="description" content="Compañía de servicio técnico con más de 25 años de experiencia en Bogotá. Reparación a domicilio de refrigeración (nevecones, neveras, congeladores), lavadoras, secadoras y aire acondicionado. Garantía en cada reparación. Cobertura en Bogotá y la sabana." />
+  <meta name="keywords" content="servicio técnico Bogotá, reparación de neveras, reparación de nevecones, reparación de lavadoras, técnico de lavadoras Bogotá, aire acondicionado Bogotá, reparación de secadoras, OCACENTRO" />
+  <meta name="author" content="OCACENTRO — Compañía de Servicio Técnico" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://serviciotecnicodenevecones.com/" />
+
+  <!-- ============================ OPEN GRAPH ============================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:site_name" content="OCACENTRO — Compañía de Servicio Técnico" />
+  <meta property="og:title" content="OCACENTRO | Servicio Técnico en Bogotá — Refrigeración, Lavadoras y Aire" />
+  <meta property="og:description" content="Más de 25 años reparando a domicilio en Bogotá y la sabana. Refrigeración, lavadoras, secadoras y aire acondicionado. Garantía en cada reparación." />
+  <meta property="og:url" content="https://serviciotecnicodenevecones.com/" />
+  <meta property="og:image" content="https://serviciotecnicodenevecones.com/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- ============================ TWITTER CARDS ============================ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OCACENTRO | Servicio Técnico en Bogotá" />
+  <meta name="twitter:description" content="Reparación a domicilio de refrigeración, lavadoras y aire acondicionado. Más de 25 años de experiencia. Garantía en cada reparación." />
+  <meta name="twitter:image" content="https://serviciotecnicodenevecones.com/assets/images/og-image.jpg" />
+
+  <!-- ============================ PWA / ICONOS ============================ -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+  <!-- ============================ FUENTES (optimizadas) ============================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  </noscript>
+
+  <!-- ============================ CSS crítico inline + diferido ============================ -->
+  <style>
+    :root{--c-navy:#0E1726;--c-blue:#2D6BFF;--c-blue-600:#1B54E8;--c-green:#22C15E;
+      --c-white:#FFFFFF;--c-mist:#F5F8FC;--c-line:#E5EAF1;--c-muted:#5A6A80;--c-text:#0E1726;
+      --font-head:'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+      --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--nav-h:74px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--font-body);color:var(--c-text);background:var(--c-white);line-height:1.6;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+    img,svg{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+    .container{width:100%;max-width:1240px;margin-inline:auto;padding-inline:clamp(1.1rem,4vw,2.25rem)}
+    .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:1000;display:flex;align-items:center;
+      transition:background .35s ease,box-shadow .35s ease}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1240px;
+      margin-inline:auto;padding-inline:clamp(1.1rem,4vw,2.25rem)}
+    .nav.is-scrolled{background:rgba(255,255,255,.78);backdrop-filter:saturate(180%) blur(16px);
+      -webkit-backdrop-filter:saturate(180%) blur(16px);box-shadow:0 1px 0 var(--c-line)}
+    .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:var(--nav-h);
+      background:radial-gradient(120% 120% at 80% -10%,#17253F 0%,#0E1726 48%,#0A111F 100%);color:#fff;overflow:hidden}
+    .hero__carousel{position:absolute;inset:0;z-index:0}
+    .hero__slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+    .hero__slide.is-active{opacity:1}
+    .hero__scrim{position:absolute;inset:0;z-index:1;
+      background:linear-gradient(90deg,rgba(10,17,31,.94) 0%,rgba(10,17,31,.6) 55%,rgba(10,17,31,.24) 100%)}
+    .hero__inner{position:relative;z-index:2;padding-block:clamp(3rem,8vh,6rem)}
+    .hero h1{font-family:var(--font-head);font-weight:700;line-height:1.05;letter-spacing:-.02em;
+      font-size:clamp(2.3rem,6vw,4.6rem);max-width:16ch}
+  </style>
+  <link rel="preload" as="style" href="css/styles.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" as="style" href="css/animations.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" as="style" href="css/responsive.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </noscript>
+
+  <!-- ============================ DATOS ESTRUCTURADOS ============================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "OCACENTRO — Compañía de Servicio Técnico",
+    "image": "https://serviciotecnicodenevecones.com/assets/images/og-image.jpg",
+    "url": "https://serviciotecnicodenevecones.com/",
+    "telephone": "+573133207064",
+    "email": "ocatecsas@gmail.com",
+    "priceRange": "$$",
+    "description": "Compañía de servicio técnico con más de 25 años de experiencia. Reparación a domicilio de refrigeración, lavadoras, secadoras y aire acondicionado en Bogotá y la sabana.",
+    "foundingDate": "1999",
+    "address": { "@type": "PostalAddress", "streetAddress": "Carrera 106 #71A-83", "addressLocality": "Bogotá", "addressRegion": "Cundinamarca", "addressCountry": "CO" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 4.7110, "longitude": -74.0721 },
+    "areaServed": [ {"@type":"City","name":"Bogotá"}, {"@type":"City","name":"Soacha"}, {"@type":"City","name":"Mosquera"}, {"@type":"City","name":"Chía"}, {"@type":"City","name":"Zipaquirá"}, {"@type":"City","name":"Cota"}, {"@type":"City","name":"Funza"}, {"@type":"City","name":"Madrid"}, {"@type":"City","name":"Cajicá"}, {"@type":"City","name":"La Calera"} ],
+    "sameAs": [ "https://www.facebook.com/ocatecsas", "https://www.instagram.com/ocatecsas" ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "312" }
+  }
+  </script>
+</head>
+
+<body data-page="inicio">
+  <div class="scroll-progress" role="progressbar" aria-label="Progreso de lectura" aria-hidden="true"><span class="scroll-progress__bar" id="scrollProgressBar"></span></div>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ====================== NAVBAR ====================== -->
+  <header>
+    <nav class="nav" id="navbar" aria-label="Navegación principal">
+      <div class="nav__inner">
+        <a class="brand" href="./" aria-label="OCACENTRO — inicio">
+          <span class="brand__mark" aria-hidden="true">
+            <img src="assets/images/logo-icon.png" alt="" width="24" height="24" />
+          </span>
+          <span class="brand__text"><strong>OCACENTRO</strong>Compañía de Servicio Técnico</span>
+        </a>
+
+        <ul class="nav__links" id="navLinks">
+          <li><a href="./">Inicio</a></li>
+          <li><a href="refrigeracion/">Refrigeración</a></li>
+          <li><a href="lavadoras/">Lavadoras</a></li>
+          <li><a href="aires-acondicionados/">Aires</a></li>
+          <li><a href="empresa/">Empresa</a></li>
+          <li><a href="contacto/">Contacto</a></li>
+        </ul>
+
+        <div class="nav__cta">
+          <a class="btn btn--ghost" href="tel:+573133207064">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Llamar
+          </a>
+          <a class="btn btn--primary" href="contacto/">Solicitar servicio</a>
+        </div>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- ====================== HERO ====================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Carrusel de fotos del hero (reemplaza las 3 imágenes por fotos reales .webp) -->
+      <div class="hero__carousel" id="heroCarousel" aria-hidden="true">
+        <img class="hero__slide is-active" src="assets/images/hero/hero-1.png" alt="" width="1586" height="992" fetchpriority="high" decoding="async" />
+        <img class="hero__slide" src="assets/images/hero/hero-2.png" alt="" width="1586" height="992" loading="lazy" decoding="async" />
+        <img class="hero__slide" src="assets/images/hero/hero-3.png" alt="" width="1586" height="992" loading="lazy" decoding="async" />
+      </div>
+      <div class="hero__scrim"></div>
+
+      <div class="container hero__inner">
+        <h1 id="hero-title" class="reveal" data-reveal>
+          Servicio técnico para tu hogar, <span class="grad-text">hoy mismo</span> y con garantía.
+        </h1>
+        <p class="hero__sub reveal" data-reveal data-reveal-delay="120">
+          Más de 25 años reparando refrigeración, lavadoras, secadoras y aire acondicionado a domicilio.
+          Técnicos certificados, atención el mismo día y garantía en Bogotá y la sabana.
+        </p>
+        <div class="hero__actions reveal" data-reveal data-reveal-delay="220">
+          <a class="btn btn--wa btn--xl ripple" href="https://wa.me/573133207064?text=Hola,%20necesito%20servicio%20t%C3%A9cnico%20a%20domicilio" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.71.63.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.42 9.42 0 0 1 14.64-11.6 9.36 9.36 0 0 1 2.76 6.66 9.43 9.43 0 0 1-9.42 9.36zm5.5-14.9A11.3 11.3 0 0 0 2.4 21.06L.5 24l3.02-.9a11.28 11.28 0 0 0 5.4 1.38h.01A11.32 11.32 0 0 0 20.53 6.6z"/></svg>
+            Escribir por WhatsApp
+          </a>
+          <a class="btn btn--light btn--xl ripple" href="tel:+573133207064">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Llamar ahora: 313 320 7064
+          </a>
+        </div>
+        <ul class="hero__badges reveal" data-reveal data-reveal-delay="300" aria-label="Sellos de confianza">
+          <li><span class="hero__badge-num">25+</span> años de experiencia</li>
+          <li><span class="check" aria-hidden="true">✓</span> Servicio garantizado</li>
+          <li><span class="check" aria-hidden="true">✓</span> Cobertura en Bogotá y la sabana</li>
+        </ul>
+      </div>
+
+      <div class="hero__dots" id="heroDots" aria-hidden="true"></div>
+    </section>
+
+    <!-- ====================== MARQUESINA DE MARCAS ====================== -->
+    <section class="brands-strip" aria-label="Marcas que reparamos">
+      <div class="container">
+        <p class="brands-strip__label">Reparamos todas las marcas</p>
+        <div class="brands-strip__track">
+          <span>LG</span><span>Samsung</span><span>Whirlpool</span><span>Mabe</span><span>Haier</span>
+          <span>Electrolux</span><span>General Electric</span><span>Challenger</span><span>Bosch</span><span>Centrales</span>
+          <span aria-hidden="true">LG</span><span aria-hidden="true">Samsung</span><span aria-hidden="true">Whirlpool</span><span aria-hidden="true">Mabe</span><span aria-hidden="true">Haier</span>
+          <span aria-hidden="true">Electrolux</span><span aria-hidden="true">General Electric</span><span aria-hidden="true">Challenger</span><span aria-hidden="true">Bosch</span><span aria-hidden="true">Centrales</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== ESTADÍSTICAS ====================== -->
+    <section class="section stats" aria-labelledby="stats-title">
+      <div class="container">
+        <h2 id="stats-title" class="sr-only">Resultados en cifras</h2>
+        <div class="stats__grid">
+          <div class="stat reveal" data-reveal><span class="stat__num" data-counter="25" data-suffix="+">0</span><span class="stat__label">Años de experiencia</span></div>
+          <div class="stat reveal" data-reveal data-reveal-delay="80"><span class="stat__num" data-counter="12000" data-suffix="+">0</span><span class="stat__label">Equipos reparados</span></div>
+          <div class="stat reveal" data-reveal data-reveal-delay="160"><span class="stat__num" data-counter="3000" data-suffix="+">0</span><span class="stat__label">Clientes atendidos</span></div>
+          <div class="stat reveal" data-reveal data-reveal-delay="240"><span class="stat__num" data-counter="15" data-suffix="+">0</span><span class="stat__label">Municipios cubiertos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SERVICIOS: 3 ÁREAS ====================== -->
+    <section class="section" id="servicios" aria-labelledby="serv-title">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <span class="eyebrow">Nuestros servicios</span>
+          <h2 id="serv-title" class="section__title">Tres áreas, un solo servicio técnico de confianza</h2>
+          <p class="section__lead">Especialistas en refrigeración, lavado y climatización. Elige el área y conoce en detalle qué hacemos por cada equipo.</p>
+        </header>
+
+        <div class="grid-cards grid-cards--3">
+          <!-- Refrigeración (más solicitado) -->
+          <article class="card card--feature reveal" data-reveal>
+            <span class="card__tag">Más solicitado</span>
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M6 6l12 12M18 6L6 18"/></svg>
+            </div>
+            <h3 class="card__title">Refrigeración</h3>
+            <p class="card__text">Nevecones, neveras, congeladores y refrigeradores. Compresor, gas, deshielo, termostato y más.</p>
+            <ul class="card__list">
+              <li>Nevecones y neveras</li>
+              <li>Congeladores y vitrinas</li>
+              <li>Recarga de gas y compresor</li>
+            </ul>
+            <a class="card__link" href="refrigeracion/">Ver detalle
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <!-- Lavadoras -->
+          <article class="card reveal" data-reveal data-reveal-delay="90">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2.5"/><circle cx="12" cy="14" r="4.5"/><path d="M7.5 5.5h.01M10.5 5.5h.01"/></svg>
+            </div>
+            <h3 class="card__title">Lavadoras y secadoras</h3>
+            <p class="card__text">Lavadoras automáticas, semiautomáticas, secadoras y centros de lavado de todas las marcas.</p>
+            <ul class="card__list">
+              <li>Rodamientos y sellos</li>
+              <li>Tarjeta electrónica y motor</li>
+              <li>Secadoras y centros de lavado</li>
+            </ul>
+            <a class="card__link" href="lavadoras/">Ver detalle
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <!-- Aire acondicionado -->
+          <article class="card reveal" data-reveal data-reveal-delay="180">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="9" rx="2.5"/><path d="M6 18c0 1.5 1 2 2 2M12 18c0 2 1.5 2.5 3 2.5M18 18c0 1.5 1 2 2 2M6 9h8"/></svg>
+            </div>
+            <h3 class="card__title">Aire acondicionado</h3>
+            <p class="card__text">Instalación, mantenimiento y reparación de equipos split y mini split para casa, oficina y local.</p>
+            <ul class="card__list">
+              <li>Instalación profesional</li>
+              <li>Mantenimiento y lavado</li>
+              <li>Recarga de gas y fugas</li>
+            </ul>
+            <a class="card__link" href="aires-acondicionados/">Ver detalle
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== POR QUÉ (resumen) ====================== -->
+    <section class="section section--mist" id="por-que" aria-labelledby="why-title">
+      <div class="container split">
+        <div class="split__media reveal" data-reveal>
+          <img src="assets/images/tecnico.png" alt="Técnico certificado de OCACENTRO revisando un electrodoméstico" width="1086" height="1449" loading="lazy" decoding="async" class="split__img" />
+          <div class="floating-card floating-card--br" aria-hidden="true"><strong>Mismo día</strong><span>en la mayoría de casos</span></div>
+        </div>
+        <div class="split__content">
+          <span class="eyebrow reveal" data-reveal>Por qué elegirnos</span>
+          <h2 id="why-title" class="section__title reveal" data-reveal data-reveal-delay="60">La tranquilidad de un servicio hecho bien a la primera</h2>
+          <p class="section__lead reveal" data-reveal data-reveal-delay="120">No improvisamos. Combinamos experiencia, repuestos originales y un trato honesto para que tu equipo vuelva a funcionar y siga funcionando.</p>
+          <ul class="feature-list">
+            <li class="reveal" data-reveal data-reveal-delay="160"><span class="feature-list__ic" aria-hidden="true">✓</span><div><strong>Técnicos certificados</strong><p>Personal con más de 25 años de experiencia en electrodomésticos.</p></div></li>
+            <li class="reveal" data-reveal data-reveal-delay="220"><span class="feature-list__ic" aria-hidden="true">✓</span><div><strong>Garantía</strong><p>Respaldamos cada reparación y cada repuesto instalado.</p></div></li>
+            <li class="reveal" data-reveal data-reveal-delay="280"><span class="feature-list__ic" aria-hidden="true">✓</span><div><strong>Atención el mismo día</strong><p>Respuesta rápida a domicilio en Bogotá y la sabana.</p></div></li>
+            <li class="reveal" data-reveal data-reveal-delay="340"><span class="feature-list__ic" aria-hidden="true">✓</span><div><strong>Presupuesto sin sorpresas</strong><p>Diagnóstico claro y precio acordado antes de intervenir.</p></div></li>
+          </ul>
+          <a class="btn btn--primary btn--lg ripple reveal" data-reveal data-reveal-delay="400" href="empresa/">Conocer la empresa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PROCESO (único, aquí) ====================== -->
+    <section class="section" id="proceso" aria-labelledby="proc-title">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <span class="eyebrow">Cómo trabajamos</span>
+          <h2 id="proc-title" class="section__title">Un proceso simple y transparente</h2>
+          <p class="section__lead">Desde tu primer mensaje hasta la garantía, siempre sabes qué pasa con tu equipo.</p>
+        </header>
+        <ol class="steps steps--4">
+          <li class="step reveal" data-reveal><span class="step__num">01</span><h3 class="step__title">Contacto</h3><p class="step__text">Nos escribes por WhatsApp o llamas y nos cuentas la falla.</p></li>
+          <li class="step reveal" data-reveal data-reveal-delay="100"><span class="step__num">02</span><h3 class="step__title">Diagnóstico</h3><p class="step__text">El técnico revisa el equipo a domicilio e identifica la causa real.</p></li>
+          <li class="step reveal" data-reveal data-reveal-delay="200"><span class="step__num">03</span><h3 class="step__title">Reparación</h3><p class="step__text">Reparamos con repuestos originales y probamos el equipo hasta dejarlo funcionando.</p></li>
+          <li class="step reveal" data-reveal data-reveal-delay="300"><span class="step__num">04</span><h3 class="step__title">Garantía</h3><p class="step__text">Entregamos garantía y quedamos atentos ante cualquier novedad.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====================== COBERTURA ====================== -->
+    <section class="section section--mist" id="cobertura" aria-labelledby="cov-title">
+      <div class="container split split--reverse">
+        <div class="split__content">
+          <span class="eyebrow reveal" data-reveal>Cobertura</span>
+          <h2 id="cov-title" class="section__title reveal" data-reveal data-reveal-delay="60">Cerca de ti en Bogotá y la sabana</h2>
+          <p class="section__lead reveal" data-reveal data-reveal-delay="120">Nos desplazamos a tu domicilio o negocio sin costo de visita cuando autorizas la reparación con nosotros.</p>
+          <ul class="chips" aria-label="Zonas cubiertas">
+            <li class="chip reveal" data-reveal data-reveal-delay="150">Bogotá — todas las localidades</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="180">Soacha</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="210">Mosquera</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="240">Chía</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="270">Zipaquirá</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="300">Cota</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="330">Funza</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="360">Madrid</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="390">Cajicá</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="420">La Calera</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="450">Sibaté</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="480">Facatativá</li>
+            <li class="chip reveal" data-reveal data-reveal-delay="510">Tabio · Tenjo · Gachancipá</li>
+          </ul>
+          <a class="btn btn--wa btn--lg ripple reveal" data-reveal data-reveal-delay="540" href="https://wa.me/573133207064" target="_blank" rel="noopener">Consultar disponibilidad</a>
+        </div>
+        <div class="split__media reveal" data-reveal data-reveal-delay="120">
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=Carrera+106+%2371A-83,+Bogota&output=embed"
+              title="Mapa de cobertura de Bogotá y municipios de la sabana"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+          <a class="map-embed__link" href="https://www.google.com/maps/search/?api=1&query=Carrera+106+%2371A-83+Bogota" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CTA BAND ====================== -->
+    <section class="section cta-band" aria-labelledby="cta-title">
+      <div class="container cta-band__inner reveal" data-reveal>
+        <h2 id="cta-title">¿Tu electrodoméstico dejó de funcionar? Lo solucionamos hoy.</h2>
+        <p>Escríbenos por WhatsApp para atención inmediata o solicita tu visita técnica en un minuto.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--wa btn--xl ripple" href="https://wa.me/573133207064?text=Hola,%20necesito%20servicio%20t%C3%A9cnico%20a%20domicilio" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="btn btn--light btn--xl ripple" href="contacto/">Solicitar servicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="./">
+          <span class="brand__mark" aria-hidden="true"><img src="assets/images/logo-icon.png" alt="" width="22" height="22" /></span>
+          <span class="brand__text"><strong>OCACENTRO</strong>Compañía de Servicio Técnico</span>
+        </a>
+        <p class="footer__desc">Compañía de servicio técnico con más de 25 años de experiencia. Reparación a domicilio de refrigeración, lavadoras, secadoras y aire acondicionado en Bogotá y la sabana.</p>
+      </div>
+      <nav class="footer__col" aria-label="Servicios">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="refrigeracion/">Refrigeración</a></li>
+          <li><a href="lavadoras/">Lavadoras y secadoras</a></li>
+          <li><a href="aires-acondicionados/">Aire acondicionado</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="Empresa">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="empresa/">Sobre nosotros</a></li>
+          <li><a href="empresa/#cobertura">Cobertura</a></li>
+          <li><a href="empresa/#faq">Preguntas frecuentes</a></li>
+          <li><a href="contacto/">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+573133207064">313 320 7064</a></li>
+          <li><a href="https://wa.me/573133207064" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:ocatecsas@gmail.com">ocatecsas@gmail.com</a></li>
+          <li>Carrera 106 #71A-83, Bogotá</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© <span id="year">2025</span> OCACENTRO · Compañía de Servicio Técnico. Todos los derechos reservados.</p>
+        <p>Bogotá · Soacha · Mosquera · Chía · Zipaquirá · Cota · Funza y más</p>
+        <nav class="footer__legal" aria-label="Legal">
+          <a href="politica-de-privacidad/">Política de privacidad</a>
+          <a href="politica-de-garantia/">Política de garantía</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================== BOTONES FLOTANTES ====================== -->
+  <div class="floating-actions" aria-label="Acciones rápidas">
+    <a class="fab fab--wa" href="https://wa.me/573133207064?text=Hola,%20necesito%20servicio%20t%C3%A9cnico%20a%20domicilio" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.71.63.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.04 21.5a9.4 9.4 0 0 1-4.81-1.32l-.34-.2-3.57.94.95-3.48-.22-.36A9.42 9.42 0 1 1 12.04 21.5z"/></svg></a>
+    <a class="fab fab--call" href="tel:+573133207064" aria-label="Llamar ahora"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+    <button class="fab fab--top" id="backToTop" aria-label="Volver arriba"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</body>
+</html>

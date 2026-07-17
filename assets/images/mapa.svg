@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="Mapa de cobertura — Bogotá y la sabana">
+  <defs>
+    <linearGradient id="mg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF1FB"/>
+      <stop offset="1" stop-color="#D7E4F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#mg)"/>
+  <!-- Retícula de calles -->
+  <g stroke="#ffffff" stroke-width="8" stroke-opacity="0.8">
+    <path d="M0 140 H900 M0 300 H900 M0 460 H900 M180 0 V620 M420 0 V620 M660 0 V620"/>
+  </g>
+  <g stroke="#C4D5EE" stroke-width="3">
+    <path d="M0 220 H900 M0 380 H900 M300 0 V620 M540 0 V620 M780 0 V620"/>
+  </g>
+  <!-- Zonas verdes -->
+  <circle cx="720" cy="200" r="70" fill="#C7E9D6" opacity="0.7"/>
+  <rect x="60" y="420" width="150" height="120" rx="16" fill="#C7E9D6" opacity="0.7"/>
+  <!-- Ruta -->
+  <path d="M120 520 Q360 400 450 320 T780 160" fill="none" stroke="#2563EB" stroke-width="6" stroke-dasharray="4 14" stroke-linecap="round" opacity="0.7"/>
+</svg>

@@ -32,6 +32,7 @@
   const navbar        = document.getElementById('navbar');
   const navToggle     = document.getElementById('navToggle');
   const navLinks      = document.getElementById('navLinks');
+  const navScrim      = document.getElementById('navScrim');
   const progressBar   = document.getElementById('scrollProgressBar');
   const backToTop     = document.getElementById('backToTop');
   const yearEl        = document.getElementById('year');
@@ -72,6 +73,7 @@
     navToggle.setAttribute('aria-expanded', 'false');
     navToggle.setAttribute('aria-label', 'Abrir menú');
     navLinks.classList.remove('is-open');
+    if (navScrim) navScrim.classList.remove('is-open');
     document.body.classList.remove('menu-open');
   }
 
@@ -81,6 +83,7 @@
     navToggle.setAttribute('aria-expanded', String(!isOpen));
     navToggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
     navLinks.classList.toggle('is-open', !isOpen);
+    if (navScrim) navScrim.classList.toggle('is-open', !isOpen);
     document.body.classList.toggle('menu-open', !isOpen);
   }
 
@@ -88,6 +91,9 @@
 
   // Cerrar el menú al pulsar un enlace (navegación de una sola página)
   menuLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+  // Cerrar al tocar el fondo oscuro
+  if (navScrim) navScrim.addEventListener('click', closeMenu);
 
   // Cerrar con tecla Escape (accesibilidad de teclado)
   document.addEventListener('keydown', (e) => {

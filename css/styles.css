@@ -212,6 +212,7 @@ ul, ol { list-style: none; }
   transition: background .35s var(--ease), box-shadow .35s var(--ease); }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%;
   max-width: var(--maxw); margin-inline: auto; padding-inline: clamp(1.1rem, 4vw, 2.25rem); gap: 1rem; }
+.nav__scrim { display: none; }
 .nav.is-scrolled {
   background: rgba(255,255,255,.72);
   backdrop-filter: saturate(180%) blur(16px); -webkit-backdrop-filter: saturate(180%) blur(16px);
@@ -369,7 +370,7 @@ ul, ol { list-style: none; }
 .split { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .split--reverse .split__media { order: 2; }
 .split__media { position: relative; }
-.split__img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); aspect-ratio: 9/10; object-fit: cover; }
+.split__img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); aspect-ratio: 9/10; object-fit: cover; object-position: top center; }
 
 .floating-card {
   position: absolute; background: rgba(255,255,255,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
@@ -530,6 +531,10 @@ ul, ol { list-style: none; }
 .footer__legal { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; }
 .footer__legal a { color: #7fb4ff; font-size: 1rem; font-weight: 600; transition: color .25s var(--ease); }
 .footer__legal a:hover { color: #fff; }
+
+/* Bloque de contacto (tarjeta + formulario + mapa) que solo se muestra en la
+   versión de celular del inicio — en escritorio se usa la página /contacto/. */
+.mobile-only-contact { display: none; }
 
 /* ======================= 19b. PÁGINAS LEGALES / 404 ===================== */
 .legal-content { max-width: 760px; margin-inline: auto; }

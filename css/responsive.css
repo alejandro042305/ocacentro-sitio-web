@@ -16,26 +16,36 @@
 /* ===================== ≤ 900px — Navbar colapsa a menú móvil ============= */
 @media (max-width: 900px) {
   .nav__cta { display: none; }
-  .nav__toggle { display: flex; }
+  .nav__toggle { display: flex; position: relative; z-index: 1001; }
 
-  /* Menú móvil: panel deslizante desde la derecha */
+  /* Fondo oscuro detrás del panel para separarlo del contenido de la página */
+  .nav__scrim {
+    display: block; position: fixed; inset: 0; background: rgba(10,17,31,.55);
+    opacity: 0; visibility: hidden; transition: opacity .35s var(--ease), visibility .35s;
+    z-index: 998;
+  }
+  .nav__scrim.is-open { opacity: 1; visibility: visible; }
+
+  /* Menú móvil: panel deslizante desde la derecha, sólido para que no se transparente el fondo */
   .nav__links {
-    position: fixed; inset: 0 0 0 auto; width: min(82vw, 340px);
+    position: fixed; inset: 0 0 0 auto; width: min(80vw, 320px);
     flex-direction: column; align-items: flex-start; justify-content: flex-start;
-    gap: .4rem; padding: calc(var(--nav-h) + 1.4rem) 1.8rem 2rem;
-    background: rgba(255,255,255,.9); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);
-    box-shadow: -20px 0 60px rgba(10,37,64,.18);
-    transform: translateX(100%); transition: transform .4s var(--ease); z-index: 999;
+    gap: .3rem; padding: calc(var(--nav-h) + 1rem) 1.6rem 2rem; overflow-y: auto;
+    background: #fff; box-shadow: -20px 0 60px rgba(10,37,64,.25);
+    transform: translateX(100%); transition: transform .35s var(--ease); z-index: 999;
   }
   .nav__links.is-open { transform: translateX(0); }
-  .nav__links a { width: 100%; padding: .85rem .2rem; font-size: 1.05rem; color: var(--c-navy) !important; border-bottom: 1px solid var(--c-line); }
+  .nav__links a { width: 100%; padding: .95rem .2rem; font-size: 1.05rem; color: var(--c-navy) !important; border-bottom: 1px solid var(--c-line); }
   .nav__links a::after { display: none; }
 
-  /* Aunque el navbar sea transparente sobre el hero, el toggle debe verse cuando el menú está abierto */
+  /* El botón hamburguesa/X siempre debe verse oscuro cuando el menú está abierto,
+     sin importar si el nav está transparente sobre el hero */
+  .nav__toggle[aria-expanded="true"] span { background: var(--c-navy) !important; }
+
   body.menu-open { overflow: hidden; }
 
-  /* Botones CTA dentro del menú móvil (se muestran vía JS clonando acciones no es necesario:
-     el usuario usa los FAB flotantes; mantenemos el menú limpio). */
+  /* Bloque de contacto (tarjeta + formulario + mapa) visible solo en móvil, al final del inicio */
+  .mobile-only-contact { display: block; }
 }
 
 /* ===================== ≤ 768px — Tablet vertical ======================== */
@@ -44,7 +54,7 @@
 
   .split { grid-template-columns: 1fr; }
   .split--reverse .split__media { order: 0; }
-  .split__img { aspect-ratio: 16/10; }
+  .split__img { aspect-ratio: 4/5; }
 
   .floating-card--tl { left: 4%; top: 4%; }
   .floating-card--br { right: 4%; bottom: 4%; }
@@ -71,8 +81,6 @@
 
   .floating-actions { right: 1rem; bottom: 1rem; }
   .fab { width: 52px; height: 52px; }
-
-  .contact__aside { order: 2; }
 }
 
 /* ===================== ≤ 425px — Móvil estándar ======================== */

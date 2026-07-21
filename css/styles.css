@@ -208,16 +208,23 @@ ul, ol { list-style: none; }
 .btn.is-loading .btn__spinner { display: inline-block; }
 
 /* ============================= 6. NAVBAR ================================== */
-.nav { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 1000; display: flex; align-items: center;
-  transition: background .35s var(--ease), box-shadow .35s var(--ease); }
+.nav { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 1000; display: flex; align-items: center; }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; width: 100%;
   max-width: var(--maxw); margin-inline: auto; padding-inline: clamp(1.1rem, 4vw, 2.25rem); gap: 1rem; }
 .nav__scrim { display: none; }
-.nav.is-scrolled {
+/* El "vidrio" del navbar vive en un pseudo-elemento, no en .nav directamente:
+   backdrop-filter/filter en .nav crearía un containing block nuevo y rompería
+   el position:fixed del panel móvil (.nav__links) y del scrim, que son hijos.
+   z-index negativo evita que .nav__inner necesite volverse un contexto de
+   apilamiento propio (eso atraparía al panel móvil detrás del scrim). */
+.nav::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  opacity: 0; transition: opacity .35s var(--ease);
   background: rgba(255,255,255,.72);
   backdrop-filter: saturate(180%) blur(16px); -webkit-backdrop-filter: saturate(180%) blur(16px);
   box-shadow: 0 1px 0 var(--c-line), var(--shadow-xs);
 }
+.nav.is-scrolled::before { opacity: 1; }
 
 .brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--font-head); }
 .brand__mark {

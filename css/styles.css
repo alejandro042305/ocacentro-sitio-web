@@ -169,6 +169,8 @@ ul, ol { list-style: none; }
 }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .btn:active { transform: translateY(0); }
+.btn svg { flex: none; }
+.btn--xl svg, .btn--lg svg { width: 24px; height: 24px; }
 
 /* CTA principal — azul (paleta monocromática) */
 .btn--primary { --btn-bg: var(--grad-blue); box-shadow: var(--shadow-blue); }
@@ -288,7 +290,7 @@ ul, ol { list-style: none; }
 .hero__dot.is-active { width: 26px; border-radius: 6px; background: #fff; }
 @media (prefers-reduced-motion: reduce){ .hero__slide { transition: none; } }
 .hero__scrim { position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(90deg, rgba(7,26,48,.94) 0%, rgba(7,26,48,.6) 55%, rgba(7,26,48,.2) 100%); }
+  background: linear-gradient(90deg, rgba(7,26,48,.62) 0%, rgba(7,26,48,.4) 55%, rgba(7,26,48,.08) 100%); }
 /* Halo decorativo */
 .hero::after {
   content: ""; position: absolute; z-index: 1; width: 60vw; height: 60vw; max-width: 720px; max-height: 720px;

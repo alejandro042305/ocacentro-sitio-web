@@ -46,6 +46,11 @@
 
   /* Bloque de contacto (tarjeta + formulario + mapa) visible solo en móvil, al final del inicio */
   .mobile-only-contact { display: block; }
+
+  /* En el inicio, solo en móvil: se quita Cobertura (el mapa queda duplicado con el
+     bloque de contacto de arriba) y la franja CTA de WhatsApp (ya está el formulario) */
+  body[data-page="inicio"] #cobertura,
+  body[data-page="inicio"] .cta-band { display: none; }
 }
 
 /* ===================== ≤ 768px — Tablet vertical ======================== */

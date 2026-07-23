@@ -339,11 +339,16 @@ ul, ol { list-style: none; }
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity .4s var(--ease);
 }
-.card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: transparent; }
-.card:hover::before { opacity: 1; }
 .card__icon { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; color: var(--c-blue); background: var(--c-blue-050); margin-bottom: 1.3rem; transition: transform .4s var(--ease); }
 .card__icon svg { width: 28px; height: 28px; }
-.card:hover .card__icon { transform: scale(1.08) rotate(-4deg); }
+/* El hover con transform en un contenedor que tiene un <a> adentro (Ver detalle)
+   hace que en iOS/Android el primer toque solo "active" el hover y haga falta
+   un segundo toque para navegar. Se limita a dispositivos con mouse real. */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: transparent; }
+  .card:hover::before { opacity: 1; }
+  .card:hover .card__icon { transform: scale(1.08) rotate(-4deg); }
+}
 .card__title { font-family: var(--font-head); font-weight: 600; font-size: var(--fs-h3); color: var(--c-navy); margin-bottom: .5rem; }
 .card__text { color: var(--c-muted); font-size: .96rem; }
 
@@ -372,7 +377,9 @@ ul, ol { list-style: none; }
 .card__link { display: inline-flex; align-items: center; gap: .45rem; font-family: var(--font-head);
   font-weight: 600; font-size: .95rem; color: var(--c-blue-600); margin-top: auto; }
 .card__link svg { transition: transform .3s var(--ease); }
-.card:hover .card__link svg { transform: translateX(4px); }
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .card__link svg { transform: translateX(4px); }
+}
 .card--feature, .grid-cards--3 .card { display: flex; flex-direction: column; }
 
 /* ================= 10. SPLIT (Por qué / Cobertura) ====================== */

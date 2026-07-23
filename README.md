@@ -160,7 +160,7 @@ Mientras tanto, el navegador usará `favicon.svg` (ya incluido y funcional).
 ## ✅ Datos de la empresa (ya integrados)
 
 - **Teléfono / WhatsApp:** +57 313 320 7064
-- **Correo:** ocatecsas@gmail.com
+- **Correo:** ocatecservices@gmail.com
 - **Dirección:** Carrera 106 #71A-83, Bogotá
 - **Cobertura:** Bogotá, Soacha, Mosquera, Chía, Zipaquirá
 - **Redes:** Facebook e Instagram (@ocatecsas)

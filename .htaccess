@@ -62,7 +62,7 @@ Options -Indexes            # No listar el contenido de las carpetas
 #  5) Página de error 404 personalizada (opcional)
 #     Crea /404.html si deseas una página de error con tu diseño.
 # ---------------------------------------------------------------------------
-# ErrorDocument 404 /404.html
+ErrorDocument 404 /404.html
 
 # ---------------------------------------------------------------------------
 #  6) Compresión GZIP / Deflate (reduce el peso de HTML, CSS, JS, SVG)

@@ -338,6 +338,7 @@ ul, ol { list-style: none; }
   background: linear-gradient(135deg, rgba(37,99,235,.5), rgba(16,185,129,.4));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity .4s var(--ease);
+  pointer-events: none;
 }
 .card__icon { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; color: var(--c-blue); background: var(--c-blue-050); margin-bottom: 1.3rem; transition: transform .4s var(--ease); }
 .card__icon svg { width: 28px; height: 28px; }

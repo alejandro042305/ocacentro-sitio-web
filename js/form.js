@@ -28,6 +28,12 @@
   const submitBtn = document.getElementById('submitBtn');
   const honeypot = form.querySelector('#website');
 
+  // Web3Forms: https://web3forms.com — sin backend propio, envía directo a tu correo.
+  const WEB3FORMS_ACCESS_KEY = 'd909098c-bc3c-4d6d-b34a-7d25d529af1e';
+  // Ruta absoluta: el formulario vive tanto en la raíz (inicio) como en /contacto/,
+  // así que una ruta relativa apuntaría a lugares distintos según la página.
+  const GRACIAS_URL = '/gracias/';
+
   /* --------------------------------------------------------------------------
      Sanitización: escapa caracteres peligrosos para evitar inyección/XSS.
      Se usa antes de mostrar cualquier valor o de enviarlo a un backend.
@@ -137,49 +143,26 @@
   }
 
   /* --------------------------------------------------------------------------
-     ENVÍO: aquí se conecta el backend. Devuelve una promesa.
-     Por defecto simula el envío (modo demostración) para no dejar la UX rota.
+     ENVÍO: Web3Forms (https://web3forms.com). Sin backend propio: envía
+     el formulario directo al correo configurado en la access_key.
      -------------------------------------------------------------------------- */
   function enviarFormulario(data) {
-    /* ===================== OPCIÓN A · FORMSPREE =========================
-       1. Crea un formulario en https://formspree.io y copia tu endpoint.
-       2. Descomenta este bloque y pon tu ID. Elimina el "modo simulado".
-    ---------------------------------------------------------------------
-    return fetch('https://formspree.io/f/TU_ID', {
+    const fd = new FormData();
+    fd.append('access_key', WEB3FORMS_ACCESS_KEY);
+    fd.append('subject', 'Nueva solicitud de servicio — OCACENTRO');
+    fd.append('from_name', data.nombre);
+    Object.keys(data).forEach((key) => fd.append(key, data[key]));
+
+    return fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    }).then((res) => {
-      if (!res.ok) throw new Error('Error de envío');
-      return res.json();
-    });
-    ==================================================================== */
-
-    /* ===================== OPCIÓN B · EMAILJS ===========================
-       1. Añade en index.html (antes de este script):
-          <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-          <script>emailjs.init('TU_PUBLIC_KEY');</script>
-       2. Descomenta:
-    ---------------------------------------------------------------------
-    return emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', {
-      from_name: data.nombre, phone: data.telefono, email: data.correo,
-      service: data.servicio, message: data.descripcion
-    });
-    ==================================================================== */
-
-    /* ===================== OPCIÓN C · API PROPIA ========================
-    ---------------------------------------------------------------------
-    return fetch('https://tu-dominio.com/api/contacto', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    }).then((res) => { if (!res.ok) throw new Error('Error'); return res.json(); });
-    ==================================================================== */
-
-    /* ===================== MODO SIMULADO (por defecto) ==================
-       Simula una latencia de red y resuelve con éxito. Reemplázalo por una
-       de las opciones anteriores cuando conectes el backend real. */
-    return new Promise((resolve) => setTimeout(resolve, 1100));
+      headers: { Accept: 'application/json' },
+      body: fd
+    })
+      .then((res) => res.json().then((json) => ({ ok: res.ok, json })))
+      .then(({ ok, json }) => {
+        if (!ok || !json.success) throw new Error(json.message || 'Error de envío');
+        return json;
+      });
   }
 
   /* --------------------------------------------------------------------------
@@ -191,9 +174,8 @@
 
     // 1) Honeypot: si el campo oculto tiene contenido, es un bot → abortar en silencio.
     if (honeypot && honeypot.value.trim() !== '') {
-      // Simular éxito para no dar pistas al bot, pero no enviar nada.
-      setStatus('¡Gracias! Te contactaremos pronto.', 'success');
-      form.reset();
+      // Redirigir igual que un envío real para no dar pistas al bot, pero no enviar nada.
+      window.location.href = GRACIAS_URL;
       return;
     }
 
@@ -228,15 +210,11 @@
 
     enviarFormulario(payload)
       .then(() => {
-        form.reset();
-        // Limpiar estados visuales de validación.
-        form.querySelectorAll('.field').forEach((f) => f.classList.remove('is-valid', 'is-invalid'));
-        setStatus('¡Solicitud enviada! Te contactaremos muy pronto. Para atención inmediata, escríbenos por WhatsApp.', 'success');
+        // Éxito: llevar al usuario a la vista de gracias (opciones: inicio / WhatsApp).
+        window.location.href = GRACIAS_URL;
       })
       .catch(() => {
         setStatus('No pudimos enviar tu solicitud. Escríbenos por WhatsApp al 313 320 7064 y te atendemos de inmediato.', 'error');
-      })
-      .finally(() => {
         setLoading(false);
       });
   });

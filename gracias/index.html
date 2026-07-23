@@ -4,12 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0E1726" />
-  <!-- Esta página puede servirse para cualquier URL rota, sin importar su profundidad.
-       <base> asegura que los recursos relativos siempre resuelvan contra la raíz del sitio. -->
   <base href="/" />
 
-  <title>Página no encontrada (404) | OCACENTRO</title>
-  <meta name="description" content="La página que buscas no existe o fue movida. Vuelve al inicio de OCACENTRO, servicio técnico a domicilio en Bogotá." />
+  <title>¡Gracias por tu mensaje! | OCACENTRO</title>
+  <meta name="description" content="Recibimos tu solicitud. Nuestro equipo se pondrá en contacto muy pronto, o escríbenos ya mismo por WhatsApp para atención inmediata." />
   <meta name="robots" content="noindex, follow" />
 
   <link rel="manifest" href="manifest.json" />
@@ -41,9 +39,16 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </noscript>
+
+  <style>
+    .thanks{text-align:center;padding-block:clamp(2rem,6vw,3.5rem)}
+    .thanks__icon{width:96px;height:96px;margin-inline:auto 1.6rem;border-radius:50%;background:rgba(34,193,94,.12);color:var(--c-green);display:grid;place-items:center}
+    .thanks__icon svg{width:48px;height:48px}
+    .thanks__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2rem}
+  </style>
 </head>
 
-<body data-page="404">
+<body data-page="gracias">
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
   <header>
@@ -72,14 +77,16 @@
   </header>
 
   <main id="contenido">
-    <section class="section error-404">
+    <section class="section thanks">
       <div class="container">
-        <p class="error-404__code reveal" data-reveal>404</p>
-        <h1 class="reveal" data-reveal data-reveal-delay="80">Esta página no existe</h1>
-        <p class="section__lead reveal" data-reveal data-reveal-delay="140" style="max-width:520px;margin-inline:auto">Puede que el enlace esté mal escrito o que la página se haya movido. Vuelve al inicio o escríbenos si necesitas ayuda.</p>
-        <div class="error-404__actions reveal" data-reveal data-reveal-delay="200">
+        <div class="thanks__icon reveal" data-reveal aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h1 class="reveal" data-reveal data-reveal-delay="80">¡Gracias! Recibimos tu solicitud</h1>
+        <p class="section__lead reveal" data-reveal data-reveal-delay="140" style="max-width:520px;margin-inline:auto">Nuestro equipo te contactará muy pronto para coordinar la visita técnica. Si necesitas atención inmediata, escríbenos por WhatsApp.</p>
+        <div class="thanks__actions reveal" data-reveal data-reveal-delay="200">
           <a class="btn btn--primary btn--lg ripple" href="./">Volver al inicio</a>
-          <a class="btn btn--ghost btn--lg ripple" href="https://wa.me/573133207064?text=Hola,%20necesito%20servicio%20t%C3%A9cnico%20a%20domicilio" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="btn btn--ghost btn--lg ripple" href="https://wa.me/573133207064?text=Hola,%20acabo%20de%20enviar%20una%20solicitud%20desde%20la%20p%C3%A1gina%20web" target="_blank" rel="noopener">Contactar por WhatsApp</a>
         </div>
       </div>
     </section>

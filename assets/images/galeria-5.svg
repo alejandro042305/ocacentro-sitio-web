@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-label="Cambio de filtro de agua en dispensador">
-  <defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#0E7490"/></linearGradient></defs>
-  <rect width="900" height="600" fill="url(#g5)"/>
-  <g stroke="#ffffff" stroke-opacity="0.16" stroke-width="2" fill="none"><path d="M0 200 H900 M0 400 H900 M300 0 V600 M600 0 V600"/></g>
-  <rect x="410" y="180" width="80" height="200" rx="24" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.35" stroke-width="3"/>
-  <circle cx="450" cy="430" r="10" fill="#7fdbff"/>
-  <circle cx="450" cy="470" r="7" fill="#7fdbff" fill-opacity="0.7"/>
-  <text x="40" y="560" font-family="'Space Grotesk',sans-serif" font-size="26" fill="#ffffff" fill-opacity="0.6" font-weight="600">Filtros de agua y aire</text>
-</svg>

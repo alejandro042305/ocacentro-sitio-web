@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Ubicación del sitemap
-Sitemap: https://serviciotecnicodenevecones.com/sitemap.xml
+Sitemap: https://ocacentrosas.com/sitemap.xml

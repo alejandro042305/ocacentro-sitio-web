@@ -201,7 +201,7 @@
       correo: sanitize(form.correo.value),
       servicio: sanitize(form.servicio.value),
       descripcion: sanitize(form.descripcion.value),
-      origen: 'serviciotecnicodenevecones.com'
+      origen: 'ocacentrosas.com'
     };
 
     // 4) Enviar.

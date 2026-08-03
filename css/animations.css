@@ -70,13 +70,6 @@
   100% { transform: translateX(120%); }
 }
 
-/* ------------------------- CARGA INICIAL ------------------------- */
-/* El body arranca invisible y aparece cuando la clase .app-ready se agrega (JS). */
-body { opacity: 0; }
-body.app-ready { animation: fadeInApp .6s var(--ease-out) forwards; }
-/* Fallback: si el JS no corre, el body igual se muestra tras cargar la hoja. */
-.no-js body, body:not(.app-ready) { opacity: 1; }
-
 /* ------------------------- HOVER PREMIUM / GLOW ------------------------- */
 /* Barrido de luz para tarjetas destacadas (se activa en hover). */
 .glow { position: relative; overflow: hidden; }
